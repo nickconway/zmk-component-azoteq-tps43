@@ -41,13 +41,13 @@ CONFIG_INPUT_TPS43=y
         compatible = "azoteq,tps43";
         reg = <0x74>;
         status = "okay";
-        
+
         /* GPIO connections */
         rdy-gpios = <&pro_micro 21 GPIO_ACTIVE_HIGH>;  /* RDY pin */
         rst-gpios = <&pro_micro 20 GPIO_ACTIVE_HIGH>;  /* RST pin */
 
         enable-power-management;
-        
+
         sensitivity = <100>;           /* 100% = normal state */
         scroll-sensitivity = <50>;     /* 50% = normal state */
         zoom-sensitivity = <50>;       /* 50% = normal state */
@@ -73,9 +73,7 @@ CONFIG_INPUT_TPS43=y
         two-finger-tap;
         single-tap;
         press-and-hold;
-        swipes;
-        // three-finger-swipe;                    /* 3-finger swipe only, without enabling 1-finger swipe (optional) */
-        // three-finger-swipe-throttle-ms=<300>;  /* Min ms between 3-finger swipe actuations, 0 disables (optional, default 300) */
+        multi-finger-swipes;
         zoom;
 
         switch-xy;
